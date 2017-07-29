@@ -16,6 +16,8 @@ import javax.ws.rs.core.MediaType;
 import org.hitesh.userEvent.user.model.UserModel;
 import org.hitesh.userEvent.user.service.UserService;
 
+
+/*Resource class*/
 @Path("/users")
 public class UserResource {
 

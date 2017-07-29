@@ -79,6 +79,7 @@ public class UserService
 			}
 			getSpecificAttributes.add(user1);
 		}
+		System.out.println(getSpecificAttributes.toString());
 		return getSpecificAttributes;
 	}
 
