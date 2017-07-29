@@ -69,7 +69,7 @@ public class UserService
 				user1.setGender(user.getGender());
 			}if(returnAttrs.contains("city"))
 			{
-				user1.setPhoneNo(user.getPhoneNo());
+				user1.setCity(user.getCity());
 			}if(returnAttrs.contains("creationTime"))
 			{
 				user1.setCreationTime(user.getCreationTime());
@@ -79,7 +79,6 @@ public class UserService
 			}
 			getSpecificAttributes.add(user1);
 		}
-		System.out.println(getSpecificAttributes.toString());
 		return getSpecificAttributes;
 	}
 
@@ -103,7 +102,7 @@ public class UserService
          return user;
 	}
 	
-	/*put method to update the user*/
+	/*PUT method to update the user*/
 	public UserModel updateUser(UserModel user)
 	{
 		if(user.getGuid() == null || !users.containsKey(user.getGuid()))

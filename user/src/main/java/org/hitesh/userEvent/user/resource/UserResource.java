@@ -13,7 +13,6 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
-
 import org.hitesh.userEvent.user.model.UserModel;
 import org.hitesh.userEvent.user.service.UserService;
 
@@ -29,6 +28,13 @@ public class UserResource {
 		return userSer.addUser(user);
 	}
 
+	@GET
+	@Path("/{guid}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public UserModel getMessage(@PathParam("guid") String guid) {
+		return userSer.getUser(guid);
+	}
+	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<UserModel> getUsers(@QueryParam("gender") String gender,
